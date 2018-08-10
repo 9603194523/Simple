@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Simple - 简！ </title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <meta name="keywords" content="layui,ui,ui框架,前端框架,JS组件,Simple">
+    <meta name="description" content="Simple 是一个基于layui框架，一个轻量，简约，包含丰富模块化前端框架，帮您快速构建网站。">
+    <link rel="stylesheet" href="./css/s.css">
+    <link rel="stylesheet" href="./css/extend.css">
+    <script src="./layui.js"></script>
+</head>
+<body>
+
+<div class="s-header">
+    <div class="layui-container flex space-between">
+        <a class="s-header-a" href="./core.html">
+            <img src="./img/logo/logo-grey.png" alt="" class="s-header-logo">
+        </a>
+        <ul class="s-header-menu">
+            <li><a href="./">首页</a></li>
+            <li><a href="./core.html" class="active">基础框架</a></li>
+            <li><a href="http://www.we63.com/index.php">组件库</a></li>
+            <li><a href="http://www.we63.com/page.php">页面库</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="s-subheader" style="">
+    <div class="layui-container flex">
+        <ul class="flex">
+            <li><a href="color.html">色彩</a></li>
+            <li><a href="typo.html">排版</a></li>
+            <li><a href="button.html">按钮</a></li>
+            <li><a href="badge.html">徽标</a></li>
+            <li><a href="nav.html">导航</a></li>
+            <li><a href="breadcrumb.html">面包屑</a></li>
+            <li><a href="table.html">表格</a></li>
+            <li><a href="form.html">表单</a></li>
+            <li><a href="panel.html">面板</a></li>
+            <li><a href="progress.html">进度条</a></li>
+            <li><a href="icon.html">图标</a></li>
+            <li><a href="blank.html">前台空页面</a></li>
+            <li><a href="admin.html">后台空页面</a></li>
+            <li><a href="help.html">辅助类</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+<div class="layui-container">
+
+    <div class="layui-row">
+
+        <div class="layui-col-md12">
+
+
+
+            <div class="heading-block">
+
+                <h1>辅助类·协同</h1>
+                <p> 带有蓝色<span class="layui-badge-dot layui-bg-blue"></span>的是自己新增的辅助类，非layui本身的。</p>
+            </div>
+
+
+
+
+            <table class="layui-table">
+                <colgroup>
+                    <col width="150">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>类名（class）</th>
+                    <th>说明</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="2" style="text-align: center">间距 / 外内边距</td>
+                </tr>
+
+                <tr>
+                    <td>mg1<span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>mg1,margin:1px; 可选类名 mgr1,mgt1,mgb1,mgl1 ,数字1-40，单位px</td>
+                </tr>
+                <tr>
+                    <td>pd1<span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>pd1,padding:1px; 可选类名 pdr1,pdt1,pdb1,pdl1 ,数字1-40，单位px</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center">布局 / 容器</td>
+                </tr>
+                <tr>
+                    <td>layui-main</td>
+                    <td>用于设置一个宽度为 1140px 的水平居中块（无响应式）</td>
+                </tr>
+                <tr>
+                    <td>layui-inline</td>
+                    <td>用于将标签设为内联块状元素</td>
+                </tr>
+                <tr>
+                    <td>layui-box</td>
+                    <td>用于排除一些UI框架（如Bootstrap）强制将全部元素设为box-sizing: border-box所引发的尺寸偏差</td>
+                </tr>
+                <tr>
+                    <td>layui-clear</td>
+                    <td>用于消除浮动（一般不怎么常用，因为layui几乎没用到浮动）</td>
+                </tr>
+                <tr>
+                    <td>layui-btn-container</td>
+                    <td>用于定义按钮的父容器。（layui 2.2.5 新增）</td>
+                </tr>
+                <tr>
+                    <td>layui-btn-fluid</td>
+                    <td>用于定义流体按钮。即宽度最大化适应。（layui 2.2.5 新增）</td>
+                </tr>
+
+
+                <tr>
+                    <td>flex<span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>使用flex 弹性布局</td>
+                </tr>
+
+
+
+                <tr>
+                    <td>space-between<span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>两端对齐，子元素之间有间隙，justify-content:space-between;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center">辅助</td>
+                </tr>
+
+
+
+
+
+                <tr>
+                    <td>layui-icon</td>
+                    <td>用于图标</td>
+                </tr>
+                <tr>
+                    <td>layui-elip</td>
+                    <td>用于单行文本溢出省略</td>
+                </tr>
+                <tr>
+                    <td>layui-unselect</td>
+                    <td>用于屏蔽选中</td>
+                </tr>
+                <tr>
+                    <td>layui-disabled</td>
+                    <td>用于设置元素不可点击状态</td>
+                </tr>
+                <tr>
+                    <td>layui-circle</td>
+                    <td>用于设置元素为圆形</td>
+                </tr>
+                <tr>
+                    <td>layui-show</td>
+                    <td>用于显示块状元素</td>
+                </tr>
+                <tr>
+                    <td>layui-hide</td>
+                    <td>用于隐藏元素</td>
+                </tr>
+
+                <tr>
+                    <td>pull-left <span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>左浮动，可选 pull-right</td>
+                </tr>
+
+
+                <tr>
+                    <td>has-shadow <span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>添加背影，一般用于box的整体阴影 #xxx</td>
+                </tr>
+
+
+                <tr>
+                    <td>has-border <span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>添加边框，一般用于添加box的1px边框 #xxx</td>
+                </tr>
+
+                <tr>
+                    <td>has-radius <span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>添加圆角，一般用于添加box的$border-radius的圆角 2px默认值</td>
+                </tr>
+
+                <tr>
+                    <td>no-radius <span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>清除圆角</td>
+                </tr>
+
+                <tr>
+                    <td>img-response <span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>响应式图片类</td>
+                </tr>
+
+                <tr>
+                    <td>img-circle <span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>全圆图</td>
+                </tr>
+
+                <tr>
+                    <td>img-round <span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>2px圆角图片</td>
+                </tr>
+
+
+
+                <tr>
+                    <td colspan="2" style="text-align: center">文本</td>
+                </tr>
+                <tr>
+                    <td>layui-text</td>
+                    <td>定义一段文本区域（如文章），该区域内的特殊标签（如a、li、em等）将会进行相应处理</td>
+                </tr>
+                <tr>
+                    <td>layui-word-aux</td>
+                    <td>灰色标注性文字，左右会有间隔</td>
+                </tr>
+
+                <tr>
+                    <td>text-left <span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>文本左对齐方式，可选 text-right，text-center</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center">背景色和文本色</td>
+                </tr>
+                <tr>
+                    <td>layui-bg-green</td>
+                    <td>用于设置元素墨绿色背景</td>
+                </tr>
+
+                <tr>
+                    <td>bg-body<span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>取背景色:#F4F6F9</td>
+                </tr>
+
+                <tr>
+                    <td>bg-orange<span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>用于设置元素橙色背景</td>
+                </tr>
+
+                <tr>
+                    <td>text-cyan<span class="layui-badge-dot layui-bg-blue"></span></td>
+                    <td>用于设置元素藏青色文本字体色</td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+
+
+<div class="layui-col-md12">
+    <div class="s-footer">
+        <ul>
+            <li><strong>Simple </strong></li>
+            <li>Version: v1.0</li>
+            <li>Last Update:2018-8-3</li>
+            <li>
+                <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260258189'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1260258189%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+
+    layui.use(['element','form','jquery','upload','laydate'], function(){
+
+        var element = layui.element;
+        var form = layui.form;
+        var $ = layui.jquery;
+        var layer = layui.layer;
+        var upload = layui.upload;
+
+        var laydate = layui.laydate;
+
+
+
+        // 子菜单静态高亮
+        $('.s-subheader a').each(function(){
+
+            filename=location.href.substr(location.href.lastIndexOf('/')+1);
+
+            if ($(this).attr("href") == filename ){
+                $(this).addClass("active");
+            }
+        });
+
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#btnlogo' //绑定元素
+            ,url: '/upload/' //上传接口
+            ,done: function(res){
+                //上传完毕回调
+            }
+            ,error: function(){
+                //请求异常回调
+            }
+        });
+    });
+</script>
+</body>
+</html>
+

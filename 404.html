@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Simple - 简！ </title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <meta name="keywords" content="layui,ui,ui框架,前端框架,JS组件,Simple">
+    <meta name="description" content="Simple 是一个基于layui框架，一个轻量，简约，包含丰富模块化前端框架，帮您快速构建网站。">
+    <link rel="stylesheet" href="./css/s.css">
+    <script src="./layui.js"></script>
+</head>
+<body>
+<link rel="stylesheet" href="./css/404.css">
+
+
+
+<div class="page-container">
+
+    <span class="page-shape1"></span>
+    <span class="page-shape2"></span>
+    <div >
+        <h1 class="item-error" >404</h1>
+        <h3 class="item-title">亲来晚了，页面找不到了</h3>
+        <p class="item-desc">可能输入地址有误，或者页面被移除</p>
+        <a class="layui-btn layui-btn-primary layui-btn-lg" href="http://www.we63.com">返回首页</a>
+    </div>
+
+</div>
+
+<script>
+    layui.use(['element','code','form','jquery'], function(){
+
+        var form = layui.form;
+        var $ = layui.jquery;
+        var layer = layui.layer;
+
+
+        //监听提交
+        form.on('submit(forlogin)', function(data){
+            layer.msg(JSON.stringify(data.field));
+            return false;
+        });
+
+
+    });
+</script>
+
+</body>
+</html>

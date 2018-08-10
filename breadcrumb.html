@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Simple - 简！ </title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <meta name="keywords" content="layui,ui,ui框架,前端框架,JS组件,Simple">
+    <meta name="description" content="Simple 是一个基于layui框架，一个轻量，简约，包含丰富模块化前端框架，帮您快速构建网站。">
+    <link rel="stylesheet" href="./css/s.css">
+    <link rel="stylesheet" href="./css/extend.css">
+    <script src="./layui.js"></script>
+</head>
+<body>
+
+<div class="s-header">
+    <div class="layui-container flex space-between">
+        <a class="s-header-a" href="./core.html">
+            <img src="./img/logo/logo-grey.png" alt="" class="s-header-logo">
+        </a>
+        <ul class="s-header-menu">
+            <li><a href="./">首页</a></li>
+            <li><a href="./core.html" class="active">基础框架</a></li>
+            <li><a href="http://www.we63.com/index.php">组件库</a></li>
+            <li><a href="http://www.we63.com/page.php">页面库</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="s-subheader" style="">
+    <div class="layui-container flex">
+        <ul class="flex">
+            <li><a href="color.html">色彩</a></li>
+            <li><a href="typo.html">排版</a></li>
+            <li><a href="button.html">按钮</a></li>
+            <li><a href="badge.html">徽标</a></li>
+            <li><a href="nav.html">导航</a></li>
+            <li><a href="breadcrumb.html">面包屑</a></li>
+            <li><a href="table.html">表格</a></li>
+            <li><a href="form.html">表单</a></li>
+            <li><a href="panel.html">面板</a></li>
+            <li><a href="progress.html">进度条</a></li>
+            <li><a href="icon.html">图标</a></li>
+            <li><a href="blank.html">前台空页面</a></li>
+            <li><a href="admin.html">后台空页面</a></li>
+            <li><a href="help.html">辅助类</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="layui-container">
+
+<div class="layui-row">
+
+    <div class="layui-col-md12">
+
+        <div class="heading-block">
+
+            <h1>面包屑·坐标</h1>
+            <p>面包屑结构简单，支持自定义分隔符</p>
+        </div>
+
+
+        <h1 class="heading-mi">面包屑</h1>
+
+
+                    <div class="example">
+                        <span class="layui-breadcrumb">
+  <a href="">首页</a>
+  <a href="">国际新闻</a>
+  <a href="">亚太地区</a>
+  <a><cite>正文</cite></a>
+</span>
+
+                </div>
+
+
+
+        <h1 class="heading-mi">间隔变体</h1>
+
+
+                    <div class="example">
+                     <span class="layui-breadcrumb" lay-separator="-">
+  <a href="">首页</a>
+  <a href="">国际新闻</a>
+  <a href="">亚太地区</a>
+  <a><cite>正文</cite></a>
+</span>
+                    </div>
+
+
+
+
+        <h1 class="heading-mi">小导航</h1>
+
+
+        <div class="example">
+
+           <span class="layui-breadcrumb" lay-separator="|">
+  <a href="">娱乐</a>
+  <a href="">八卦</a>
+  <a href="">体育</a>
+  <a href="">搞笑</a>
+  <a href="">视频</a>
+  <a href="">游戏</a>
+  <a href="">综艺</a>
+</span>
+
+
+
+        </div>
+
+
+
+            </div>
+
+</div>
+</div>
+
+<div class="layui-col-md12">
+    <div class="s-footer">
+        <ul>
+            <li><strong>Simple </strong></li>
+            <li>Version: v1.0</li>
+            <li>Last Update:2018-8-3</li>
+            <li>
+                <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260258189'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1260258189%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+
+    layui.use(['element','form','jquery','upload','laydate'], function(){
+
+        var element = layui.element;
+        var form = layui.form;
+        var $ = layui.jquery;
+        var layer = layui.layer;
+        var upload = layui.upload;
+
+        var laydate = layui.laydate;
+
+
+
+        // 子菜单静态高亮
+        $('.s-subheader a').each(function(){
+
+            filename=location.href.substr(location.href.lastIndexOf('/')+1);
+
+            if ($(this).attr("href") == filename ){
+                $(this).addClass("active");
+            }
+        });
+
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#btnlogo' //绑定元素
+            ,url: '/upload/' //上传接口
+            ,done: function(res){
+                //上传完毕回调
+            }
+            ,error: function(){
+                //请求异常回调
+            }
+        });
+    });
+</script>
+</body>
+</html>
+
+

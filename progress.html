@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Simple - 简！ </title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon"/>
+    <meta name="keywords" content="layui,ui,ui框架,前端框架,JS组件,Simple">
+    <meta name="description" content="Simple 是一个基于layui框架，一个轻量，简约，包含丰富模块化前端框架，帮您快速构建网站。">
+    <link rel="stylesheet" href="./css/s.css">
+    <link rel="stylesheet" href="./css/extend.css">
+    <script src="./layui.js"></script>
+</head>
+<body>
+
+<div class="s-header">
+    <div class="layui-container flex space-between">
+        <a class="s-header-a" href="./core.html">
+            <img src="./img/logo/logo-grey.png" alt="" class="s-header-logo">
+        </a>
+        <ul class="s-header-menu">
+            <li><a href="./">首页</a></li>
+            <li><a href="./core.html" class="active">基础框架</a></li>
+            <li><a href="http://www.we63.com/index.php">组件库</a></li>
+            <li><a href="http://www.we63.com/page.php">页面库</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="s-subheader" style="">
+    <div class="layui-container flex">
+        <ul class="flex">
+            <li><a href="color.html">色彩</a></li>
+            <li><a href="typo.html">排版</a></li>
+            <li><a href="button.html">按钮</a></li>
+            <li><a href="badge.html">徽标</a></li>
+            <li><a href="nav.html">导航</a></li>
+            <li><a href="breadcrumb.html">面包屑</a></li>
+            <li><a href="table.html">表格</a></li>
+            <li><a href="form.html">表单</a></li>
+            <li><a href="panel.html">面板</a></li>
+            <li><a href="progress.html">进度条</a></li>
+            <li><a href="icon.html">图标</a></li>
+            <li><a href="blank.html">前台空页面</a></li>
+            <li><a href="admin.html">后台空页面</a></li>
+            <li><a href="help.html">辅助类</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="layui-container">
+
+<div class="layui-row">
+
+    <div class="layui-col-md12">
+
+        <div class="heading-block">
+            <h1>进度条·反馈</h1>
+            <p>实时展示进度，友好用户体验</p>
+        </div>
+
+
+        <h1 class="heading-mi">常规</h1>
+
+
+
+
+
+            <div class="example">
+
+
+                <div class="layui-progress">
+                    <div class="layui-progress-bar" lay-percent="10%"></div>
+                </div>
+
+
+                <br>
+                <div class="layui-progress">
+                    <div class="layui-progress-bar layui-bg-orange" lay-percent="50%"></div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+        <h1 class="heading-mi">显示进度比文本</h1>
+
+
+            <div class="example">
+
+                <div class="layui-progress" lay-showpercent="true">
+                    <div class="layui-progress-bar layui-bg-red" lay-percent="1/3" ></div>
+                </div>
+                <br><br>
+                <div class="layui-progress" lay-showpercent="true">
+                    <div class="layui-progress-bar layui-bg-red" lay-percent="80%"></div>
+                </div>
+                <br>
+                <div class="layui-progress layui-progress-big" lay-showpercent="true">
+                    <div class="layui-progress-bar layui-bg-green" lay-percent="50%" ></div>
+                </div>
+
+
+
+            </div>
+
+        <h1 class="heading-mi">大号进度条</h1>
+
+
+
+
+
+            <div class="example">
+
+                <div class="layui-progress layui-progress-big">
+                    <div class="layui-progress-bar" lay-percent="20%"></div>
+                </div>
+                <br>
+
+                <div class="layui-progress layui-progress-big">
+                    <div class="layui-progress-bar layui-bg-orange" lay-percent="50%"></div>
+                </div>
+                <br>
+                <div class="layui-progress layui-progress-big" lay-showPercent="true">
+                    <div class="layui-progress-bar layui-bg-blue" lay-percent="80%"></div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+</div>
+
+
+<div class="layui-col-md12">
+    <div class="s-footer">
+        <ul>
+            <li><strong>Simple </strong></li>
+            <li>Version: v1.0</li>
+            <li>Last Update:2018-8-3</li>
+            <li>
+                <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260258189'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/stat.php%3Fid%3D1260258189%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+
+
+    layui.use(['element','form','jquery','upload','laydate'], function(){
+
+        var element = layui.element;
+        var form = layui.form;
+        var $ = layui.jquery;
+        var layer = layui.layer;
+        var upload = layui.upload;
+
+        var laydate = layui.laydate;
+
+
+
+        // 子菜单静态高亮
+        $('.s-subheader a').each(function(){
+
+            filename=location.href.substr(location.href.lastIndexOf('/')+1);
+
+            if ($(this).attr("href") == filename ){
+                $(this).addClass("active");
+            }
+        });
+
+        //执行实例
+        var uploadInst = upload.render({
+            elem: '#btnlogo' //绑定元素
+            ,url: '/upload/' //上传接口
+            ,done: function(res){
+                //上传完毕回调
+            }
+            ,error: function(){
+                //请求异常回调
+            }
+        });
+    });
+</script>
+</body>
+</html>
